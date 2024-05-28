@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="opmaak.css">
+    <title>Portfolio</title>
+    
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#portfolio" onclick="smoothScroll(event, 'portfolio')">Portfolio</a>
+        <a href="#vaardigheden" onclick="smoothScroll(event, 'vaardigheden')">Mijn vaardigheden</a>
+        <a href="#opleiding" onclick="smoothScroll(event, 'opleiding')">Opleiding</a>
+        <a href="#diplomas" onclick="smoothScroll(event, 'diplomas')">Diploma's</a>
+        <a href="#werkervaring" onclick="smoothScroll(event, 'werkervaring')">Werkervaring</a>
+        <a href="#programmeertalen" onclick="smoothScroll(event, 'programmeertalen')">Programmeertalen</a>
+        <a href="#projecten" onclick="smoothScroll(event, 'projecten')">Projecten</a>
+        <a href="#social-media" onclick="smoothScroll(event, 'social-media')">Sociale media links</a>
+    </div>
+
+    <div class="container">
+        <div class="item" id="portfolio">
+            <img src="m.jpg" alt="Voorbeeld afbeelding 1" style="width: 200px; height: auto;">
+            <div>
+                <h1>Mohamed el Bouhaddani</h1>
+                <h2>Over mij</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate soluta rerum culpa nulla consequatur esse aspernatur magnam porro similique eligendi ut ducimus dolore voluptates distinctio, sint fugit! Mollitia, fuga non?</p>
+            </div>
+        </div>
+        <div class="item" id="vaardigheden">
+            <div>
+                <h2>Mijn vaardigheden</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod aut nemo molestiae error sit omnis delectus tenetur harum, dolor aperiam, reiciendis ullam! Quos dignissimos reprehenderit aliquid nobis voluptates sapiente explicabo.</p>
+            </div>
+            <img src="https://learnbeat.nl/wp-content/uploads/sites/12/2020/01/blog-hero-onderwijstrends-Het-wat-en-waarom-van-21e-eeuwse-vaardigheden-in-het-onderwijs.jpg"
+                alt="Voorbeeld afbeelding 2" style="width: 200px; height: auto;">
+        </div>
+        <div class="item" id="opleiding">
+            <div>
+                <h2>Opleiding</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae facere voluptatibus fugiat expedita. Nesciunt corporis, ipsa vero incidunt aspernatur placeat cum quod necessitatibus reprehenderit repudiandae provident? Id consequuntur suscipit cum!</p>
+            </div>
+            <img src="https://www.secretaressenet.nl/wp-content/uploads/2019/05/Akkoord-wergever-opleiding.jpg"
+                alt="Voorbeeld afbeelding 3" style="width: 200px; height: auto;">
+        </div>
+        <div class="item" id="diplomas">
+            <div>
+                <h2>Diploma's</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea ut distinctio placeat ducimus, consequatur minima sit a sapiente ipsum laudantium corporis harum blanditiis. Nemo doloremque debitis enim magnam. Quas, temporibus?</p>
+            </div>
+            <img src="https://static.rmnet.be/imgcontrol/clients/rmnet/c750-d511/content/medias/diploma_shutterstock_1039374790.jpg"
+                alt="Voorbeeld afbeelding 4" style="width: 200px; height: auto;">
+        </div>
+        <div class="item" id="werkervaring">
+            <div>
+                <h2>Werkervaring</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, vel repellat voluptatum facere, perferendis rerum assumenda voluptas sunt cupiditate repellendus aspernatur tenetur modi vero sint? Ea alias error beatae eveniet!</p>
+            </div>
+            <img src="https://www.cvmaker.nl/static/3ad4c9701a511e0b76cf726cf099e16a/616c4/ws-all-how-to-write-work-experience-on-a-cv-with-tips-and-examples.png"
+                alt="Voorbeeld afbeelding 5" style="width: 200px; height: auto;">
+        </div>
+        <div class="item" id="programmeertalen">
+            <div>
+                <h2>Programmeertalen</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur tempore eaque commodi inventore mollitia, optio quia libero, rem nobis modi sit quo fugit vitae vel dolore architecto rerum ipsum repudiandae.</p>
+            </div>
+            <img src="https://qph.cf2.quoracdn.net/main-qimg-0030b96d000541a5fcbbf773067219b2-pjlq"
+                alt="Voorbeeld afbeelding 6" style="width: 200px; height: auto;">
+        </div>
+        <div class="item" id="projecten">
+            <div>
+                <h2>Projecten</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In harum pariatur quidem perspiciatis velit odio illum ducimus illo itaque nisi, alias beatae doloribus fugit delectus dolores saepe, quaerat exercitationem quisquam?</p>
+            </div>
+            <img src="https://vmn-managementsupport.imgix.net/uploads/2022/11/project-scaled.jpg?auto=compress%2Cformat&q=50"
+                alt="Voorbeeld afbeelding 7" style="width: 200px; height: auto;">
+        </div>
+        <div class="item" id="social-media">
+            <div>
+                <h2>Sociale media links</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur suscipit enim officiis distinctio modi facilis natus ea possimus repellat dignissimos, iste cum atque earum quis asperiores architecto molestiae. Voluptate, ipsam.</p>
+            </div>
+            <img src="https://www.simpc.nl/wp-content/uploads/2020/07/social-media.jpg" alt="Voorbeeld afbeelding 8"
+                style="width: 200px; height: auto;">
+        </div>
+    </div>
+    <script>
+        function smoothScroll(event, targetId) {
+            event.preventDefault();
+            const targetElement = document.getElementById(targetId);
+            const targetPosition = targetElement.getBoundingClientRect().top;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - 70; // adjust for fixed navbar height
+            const duration = 700; // duration in milliseconds
+            let start = null;
+
+            window.requestAnimationFrame(function step(timestamp) {
+                if (!start) start = timestamp;
+                const progress = timestamp - start;
+                const progressPercentage = Math.min(progress / duration, 1);
+                const ease = progressPercentage < 0.5
+                    ? 2 * progressPercentage * progressPercentage
+                    : 1 - Math.pow(-2 * progressPercentage + 2, 2) / 2;
+                window.scrollTo(0, startPosition + distance * ease);
+                if (progress < duration) {
+                    window.requestAnimationFrame(step);
+                }
+            });
+        }
+    </script>
+    <footer 
+            id="copyright">&copy; 2024. All rights reserved.
+        </div>
+    </footer>
+    </footer>
+</body>
+
+</html>

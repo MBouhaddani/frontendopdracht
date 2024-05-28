@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #145dab;
+    outline: 3px black;
+}
+
+.navbar {
+    background-color: #1e9700;
+    /* Donkerpaars */
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    outline: 3px solid black;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #7D26CD;
+    /* Iets lichtere paars voor hover effect */
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px 20px;
+    /* Voeg padding-top toe om rekening te houden met het vaste menu */
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+    width: 80%;
+}
+
+.item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.item img {
+    width: 300px;
+    /* Vergroot de afbeelding */
+    height: auto;
+    margin: 0 40px;
+    /* Verplaats de afbeelding iets meer naar het midden */
+}
+
+.item div {
+    flex: 1;
+    font-size: 1.2em;
+    /* Vergroot de tekst */
+}
+
+.item h2 {
+    font-size: 1.5em;
+    /* Vergroot de koptekst */
+}
+
+.item p {
+    font-size: 1.2em;
+    /* Vergroot de paragraaf tekst */
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding-top: 120px;
+        /* Increase the top padding for smaller screens */
+    }
+
+    .item {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .item img {
+        width: 100%;
+        /* Make the image width 100% for smaller screens */
+        margin: 20px 0;
+        /* Adjust the image margin for smaller screens */
+    }
+}
+
+#copyright{border: 1px solid black; padding: 40px;
+    text-align: center; background-color: red;
+    outline: 3px solid black;
+}
