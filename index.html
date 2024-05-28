@@ -5,20 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="opmaak.css">
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+
+       
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        outline: 2px solid rgb(0, 0, 0); /* Add this line to add an outline */
+    }
+</style>
+
+    </style>
     <title>Portfolio</title>
-    
 </head>
 
 <body>
     <div class="navbar">
-        <a href="#portfolio" onclick="smoothScroll(event, 'portfolio')">Portfolio</a>
-        <a href="#vaardigheden" onclick="smoothScroll(event, 'vaardigheden')">Mijn vaardigheden</a>
-        <a href="#opleiding" onclick="smoothScroll(event, 'opleiding')">Opleiding</a>
-        <a href="#diplomas" onclick="smoothScroll(event, 'diplomas')">Diploma's</a>
-        <a href="#werkervaring" onclick="smoothScroll(event, 'werkervaring')">Werkervaring</a>
-        <a href="#programmeertalen" onclick="smoothScroll(event, 'programmeertalen')">Programmeertalen</a>
-        <a href="#projecten" onclick="smoothScroll(event, 'projecten')">Projecten</a>
-        <a href="#social-media" onclick="smoothScroll(event, 'social-media')">Sociale media links</a>
+       <a href="#portfolio" onclick="smoothScroll(event, 'portfolio')">Portfolio</a>
+       <a href="#vaardigheden" onclick="smoothScroll(event, 'vaardigheden')">Mijn vaardigheden</a>
+       <a href="#opleiding" onclick="smoothScroll(event, 'opleiding')">Opleiding</a>
+       <a href="#diplomas" onclick="smoothScroll(event, 'diplomas')">Diploma's</a>
+       <a href="#werkervaring" onclick="smoothScroll(event, 'werkervaring')">Werkervaring</a>
+       <a href="#programmeertalen" onclick="smoothScroll(event, 'programmeertalen')">Programmeertalen</a>
+       <a href="#projecten" onclick="smoothScroll(event, 'projecten')">Projecten</a>
+       <a href="#social-media" onclick="smoothScroll(event, 'social-media')">Sociale media links</a>
     </div>
 
     <div class="container">
@@ -87,8 +104,10 @@
                 style="width: 200px; height: auto;">
         </div>
     </div>
+    </div>
+
     <script>
-        function smoothScroll(event, targetId) {
+              function smoothScroll(event, targetId) {
             event.preventDefault();
             const targetElement = document.getElementById(targetId);
             const targetPosition = targetElement.getBoundingClientRect().top;
@@ -111,11 +130,11 @@
             });
         }
     </script>
-    <footer 
-            id="copyright">&copy; 2024. All rights reserved.
-        </div>
-    </footer>
-    </footer>
+ <footer 
+ id="copyright">&copy; 2024. All rights reserved.
+</div>
+</footer>
+</footer>
 </body>
 
 </html>
