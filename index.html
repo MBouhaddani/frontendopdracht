@@ -4,26 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="opmaak11.css">
-    
-    <title>Portfolio</title>
+    <meta name="description"
+        content="Portfolio van Mohamed el Bouhaddani, met vaardigheden, opleiding, werkervaring, projecten en contactformulier.">
+
+    <link rel="stylesheet" href="./css/opmaak11.css">
+
+    <title>Portfolio - Mohamed el Bouhaddani</title>
+
 </head>
 
 <body>
     <nav class="navbar">
         <a href="#portfolio" onclick="smoothScroll(event, 'portfolio')">Portfolio</a>
-        <a href="#vaardigheden" onclick="smoothScroll(event, 'vaardigheden')">Mijn vaardigheden</a>
-        <a href="#opleiding" onclick="smoothScroll(event, 'opleiding')">Opleiding</a>
-        <a href="#diplomas" onclick="smoothScroll(event, 'diplomas')">Diploma's</a>
-        <a href="#werkervaring" onclick="smoothScroll(event, 'werkervaring')">Werkervaring</a>
-        <a href="#programmeertalen" onclick="smoothScroll(event, 'programmeertalen')">Programmeertalen</a>
-        <a href="#projecten" onclick="smoothScroll(event, 'projecten')">Projecten</a>
-        <a href="#social-media" onclick="smoothScroll(event, 'social-media')">Sociale media links</a>
+        <a href="#contact" onclick="smoothScroll(event, 'contact')">Contact</a>
     </nav>
+    <div style="text-align: center;">
+        <h1>Welkom op mijn portfolio</h1>
+        </div>
+    </div>
 
     <main class="container">
         <section class="item" id="portfolio">
-            <img src="m.jpg" alt="Portret van Mohamed el Bouhaddani">
+            <img src="./img/m.jpg" alt="Portret van Mohamed el Bouhaddani">
             <h1>Mohamed el Bouhaddani</h1>
             <h2>Over mij</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate soluta rerum culpa nulla consequatur
@@ -52,7 +54,7 @@
                 minima sit a sapiente ipsum laudantium corporis harum blanditiis. Nemo doloremque debitis enim magnam.
                 Quas, temporibus?</p>
             <img src="https://static.rmnet.be/imgcontrol/clients/rmnet/c750-d511/content/medias/diploma_shutterstock_1039374790.jpg"
-                alt="Diploma's afbeelding">
+                alt="Diploma afbeelding">
         </section>
         <section class="item" id="werkervaring">
             <h2>Werkervaring</h2>
@@ -79,38 +81,25 @@
                 alt="Projecten afbeelding">
         </section>
         <section class="item" id="social-media">
-            <h2>Sociale media links</h2>
+            <h2>Sociale media</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur suscipit enim officiis distinctio
                 modi facilis natus ea possimus repellat dignissimos, iste cum atque earum quis asperiores architecto
                 molestiae. Voluptate, ipsam.</p>
             <img src="https://www.simpc.nl/wp-content/uploads/2020/07/social-media.jpg" alt="Sociale media afbeelding">
         </section>
     </main>
-
-    <script>
-        function smoothScroll(event, targetId) {
-            event.preventDefault();
-            const targetElement = document.getElementById(targetId);
-            const targetPosition = targetElement.getBoundingClientRect().top - 70;
-            const startPosition = window.pageYOffset;
-            const distance = targetPosition - startPosition;
-            const duration = 700;
-            let start = null;
-
-            window.requestAnimationFrame(function step(timestamp) {
-                if (!start) start = timestamp;
-                const progress = timestamp - start;
-                const progressPercentage = Math.min(progress / duration, 1);
-                const ease = progressPercentage < 0.5
-                    ? 2 * progressPercentage * progressPercentage
-                    : 1 - Math.pow(-2 * progressPercentage + 2, 2) / 2;
-                window.scrollTo(0, startPosition + distance * ease);
-                if (progress < duration) {
-                    window.requestAnimationFrame(step);
-                }
-            });
-        }
-    </script>
+    <section class="item" id="contact">
+        <h2>Contact</h2>
+            <label for="naam">Naam:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="bericht">bericht:</label>
+            <textarea id="bericht" name="bericht" required></textarea>
+            <button type="verzend">verzend</button>
+        </form>
+    </section>
+    <script src="scroll.js"></script>
 
     <footer>
         <p style="text-align: center;">&copy; 2024 Mohamed el Bouhaddani. All rights reserved.</p>
